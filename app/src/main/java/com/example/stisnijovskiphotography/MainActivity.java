@@ -20,6 +20,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static android.widget.AdapterView.*;
+
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<Integer> mImageIds = new ArrayList<>(Arrays.asList(
@@ -38,10 +40,12 @@ public class MainActivity extends AppCompatActivity {
         GridView gridView = findViewById(R.id.myGrid);
         gridView.setAdapter(new ImageAdaptor(mImageIds, this));
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int item_pos = mImageIds.get(position);
+
+                ShowDialogBox(item_pos);
             }
         });
 
@@ -78,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
-    public void ShowDialogBox(final int item_pos){
-        final Dialog dialog = new Dialog(this );
+    public void ShowDialogBox( final int item_pos){
+       final  Dialog dialog = new Dialog(this );
 
         dialog.setContentView(R.layout.custom_dialog);
 
@@ -88,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView Image = dialog.findViewById(R.id.img);
         Button btn_Full = dialog.findViewById(R.id.btn_full);
         Button btn_Close = dialog.findViewById(R.id.btn_close);
+
         String title = getResources().getResourceName(item_pos);
 
         //extracting name
