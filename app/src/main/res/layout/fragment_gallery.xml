@@ -3,20 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GalleryFragment"
     android:background="@color/colorPrimaryDark"
-    >
+    android:padding="16dp"
+    tools:context=".GalleryFragment">
 
 
     <!-- TODO: Update blank fragment layout -->
     <GridView
         android:id="@+id/myGrid"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
         android:columnWidth="100dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="10dp"
+        android:gravity="center"
         android:horizontalSpacing="10dp"
-    />
-
+        android:numColumns="3"
+        android:verticalSpacing="10dp" />
 </RelativeLayout>
