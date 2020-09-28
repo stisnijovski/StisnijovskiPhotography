@@ -4,18 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GalleryFragment"
-    android:background="@color/colorPrimary"
+    android:background="#3c3c3c"
+
+
     >
 
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+         <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Contact"
         android:textColor="#ffff"
-        android:textSize="30dp"
-        android:layout_centerInParent="true"
+        android:textSize="50dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="dime.bt@hotmail.com"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="+38978286633"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="https://www.facebook.com/StisnijovskiPhotography"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:autoLink="web"
+        />
+
+
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact" />
-
+        android:layout_marginTop="-100dp"
+        android:src="@drawable/cover" />
 
 </RelativeLayout>
